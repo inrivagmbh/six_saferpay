@@ -8,10 +8,10 @@ module SixSaferpay
                     :redirect_url
                    )
 
-      def initialize(response_header:,
-                    token:,
-                    expiration:,
-                    redirect_url: )
+      def initialize(response_header: nil,
+                    token: nil,
+                    expiration: nil,
+                    redirect_url: nil)
         @response_header = SixSaferpay::ResponseHeader.new(response_header.to_h) if response_header
         @token = token
         @expiration = expiration
